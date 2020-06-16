@@ -1,2 +1,8 @@
 # CL3-rota
-we use this for constructing the swab-inactivation rota
+We use this for constructing the swab-inactivation rota.
+
+Use Python 3
+```
+pip install ortools
+python rota.py > output.tsv
+```
