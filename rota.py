@@ -9,7 +9,7 @@ num_main_workers =9
 num_standby_workers =3
 
 main_shift_weighting = 3 # how much worse main shifts are than standby shifts. Must be an integer.
-standby_shift_weighting = 2 # how much worse main shifts are than standby shifts. Must be an integer.
+standby_shift_weighting = 2 # how bad are standby shifts.
 
 max_time = 70 # max time to look for solutions in seconds
 debug_info = False # Set to True and the rota will record Yes/Maybe requests
