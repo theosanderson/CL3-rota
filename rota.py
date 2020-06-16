@@ -87,9 +87,11 @@ for p in people_index:
         entry = "no"
         logging.warning(f"'{entry}'' parsed as no.\n\n")
       if entry == "no":
+        # If no we add a hard constraint
         model.Add(main_shifts[(p, d, t)] == 0)
         model.Add(standby_shifts[(p, d, t)] == 0)
       if entry == "maybe":
+        # If maybe we count how many times we had to use maybes to try to minimise
         loss_list.append(main_shifts[(p, d, t)] * main_shift_weighting)
         loss_list.append(standby_shifts[(p, d, t)] * standby_shift_weighting)
 
