@@ -1,0 +1,66 @@
+﻿First,Last,email,Mon_am,Mon_pm,Mon_eve,Tue_am,Tue_pm,Tue_eve,Wed_am,Wed_pm,Wed_eve,Thur_am,Thur_pm,Thur_eve,Fri_am,Fri_pm,Fri_eve,Sat_am,Sat_pm,Sat_eve,Sun_am,Sun_pm,Sun_eve,notes,days
+ Olivia ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Ruby ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Emily ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Grace ,Fake,person@person.com,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,,3
+ Jessica ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,,4
+ Chloe ,Fake,person@person.com,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,,
+ Sophie ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,,
+ Lily ,Fake,person@person.com,No,No,,No,Yes,,Yes,Yes,,No,No,,Yes,Yes,,No,No,,No,No,,,3
+ Amelia ,Fake,person@person.com,No,No,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,No,Maybe,Maybe,Yes,Yes,Maybe,No,No,Maybe,Yes,Yes,Maybe,,4
+ Evie ,Fake,person@person.com,Yes,Yes,Yes,Maybe,Maybe,Maybe,Yes,Yes,Yes,Maybe,No,Maybe,Yes,Yes,Yes,Maybe,Maybe,Maybe,Maybe,Maybe,Maybe,,5
+ Mia ,Fake,person@person.com,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,
+ Ella ,Fake,person@person.com,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,No,Maybe,Yes,Yes,Maybe,No,No,Maybe,No,No,Maybe,,
+ Charlotte ,Fake,person@person.com,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,,6
+ Lucy ,Fake,person@person.com,No,No,No,No,No,No,No,No ,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Megan ,Fake,person@person.com,No,No,,Yes,Yes,,No,No ,,No,No,,No,No,,No,No,,No,No,,,1
+ Ellie ,Fake,person@person.com,No,No,,Yes,Yes,,Maybe,Maybe,,Yes,No,,No,No,,No,No,,No,No,,,2
+ Isabelle ,Fake,person@person.com,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,,
+ Isabella ,Fake,person@person.com,No,Yes,Yes,Yes,Yes,Yes,yes,yes,Yes,no,Yes,Yes,Yes,Yes,Yes,yes,No,No,No,No,No,,4
+ Hannah ,Fake,person@person.com,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,
+ Katie ,Fake,person@person.com,No,No,Maybe,yes,Yes,Maybe,yes,yes,Maybe,no,Yes,Maybe,no,no,no,Yes,yes,Maybe,Yes,Yes,Maybe,,
+ Ava ,Fake,person@person.com,no,no,no,yes,Yes,No,yes,yes,Yes,no,Yes,No,Yes,Yes,Yes,Maybe,Maybe,maybe,Maybe,No,No,,
+ Holly ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,yes,yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,no,No,,
+ Summer ,Fake,person@person.com,Yes,Yes,Maybe,No,No,No,No,No ,No,No,Yes,Maybe,Yes,Yes,Yes,No,No,No,yes,No,No,,5
+ Millie ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,6
+ Daisy ,Fake,person@person.com,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,,
+ Phoebe ,Fake,person@person.com,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Maybe,Yes,Yes,Maybe,,6
+ Freya ,Fake,person@person.com,No,Yes,Maybe,No,Yes,Maybe,No,Yes,Maybe,No,No,Maybe,No,Yes,Maybe,Maybe,No,Maybe,Maybe,Maybe,Maybe,,3
+ Abigail ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,
+ Poppy ,Fake,person@person.com,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,No,Maybe,Yes,Yes,No,No,No,No,No,No,No,,2
+ Erin ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,,
+ Emma ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,
+ Molly ,Fake,person@person.com,Yes,Yes,Maybe,No,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,,
+ Imogen ,Fake,person@person.com,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,,2
+ Amy ,Fake,person@person.com,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,no,,No,No,,,
+ Jasmine ,Fake,person@person.com,Yes,Yes,,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,
+ Isla ,Fake,person@person.com,Yes,Yes,,Yes,Yes,,No,No,,Yes,Yes,,Yes,Yes,,No,No,,No,No,,,4
+ Scarlett ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Leah ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,,1
+ Sophia ,Fake,person@person.com,Yes,Yes,,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,,4
+ Elizabeth ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,7
+ Eva ,Fake,person@person.com,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,,6
+ Brooke ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,
+ Matilda ,Fake,person@person.com,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,Yes,Yes,,,7
+ Caitlin ,Fake,person@person.com,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,,2
+ Keira ,Fake,person@person.com,Yes,No,No,Yes,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,,1
+ Alice ,Fake,person@person.com,No,No,No,No,No,No,No,No ,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,,2
+ Lola ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,6
+ Lilly ,Fake,person@person.com,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,No,No,No,no,no,no,no,no,no,,2
+ Amber ,Fake,person@person.com,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,5
+ Isabel ,Fake,person@person.com,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,Maybe,Yes,Yes,,3
+ Lauren ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,5
+ Georgia ,Fake,person@person.com,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Maybe,Maybe,No,Maybe,Maybe,No,,2
+ Gracie ,Fake,person@person.com,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,
+ Eleanor ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Maybe,Yes,Yes,Yes,Yes,Yes,Yes,,6
+ Bethany ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Madison ,Fake,person@person.com,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,,3
+ Amelie ,Fake,person@person.com,Yes,No,No,No,No,Maybe,Yes,Yes,Maybe,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,3
+ Isobel ,Fake,person@person.com,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,,0
+ Paige ,Fake,person@person.com,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,6
+ Lacey ,Fake,person@person.com,no,no,no,yes,yes,yes,no,No ,no,yes,yes,yes,yes,yes,yes,No,No,No,No,No,No,,4
+ Sienna ,Fake,person@person.com,No,no,yes,no,,yes,no,yes,yes,no,yes,yes,no,yes,yes,yes,yes,yes,no,yes,yes,,
+ Libby ,Fake,person@person.com,yes,yes,yes,no,no,no,no,No ,no,yes,yes,yes,yes,yes,yes,no,yes,no,no,yes,no,,2
+ Maisie ,Fake,person@person.com,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,
+ Anna ,Fake,person@person.com,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,
+ Rebecca ,Fake,person@person.com,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,,

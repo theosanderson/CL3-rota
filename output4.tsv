@@ -1,0 +1,84 @@
+Mon_am	Mon_pm	Tue_am	Tue_pm	Wed_am	Wed_pm	Thur_am	Thur_pm	Fri_am	Fri_pm	Sat_am	Sat_pm	Sun_am	Sun_pm	
+ Holly 	 Grace 	 Sophie 	 Chloe 	 Chloe 	 Sophie 	 Chloe 	 Katie 	 Sophie 	 Jessica 	 Jessica 	 Grace 	 Jessica 	 Grace 	
+ Summer 	 Evie 	 Ella 	 Lily 	 Hannah 	 Lily 	 Mia 	 Ava 	 Lily 	 Evie 	 Charlotte 	 Millie 	 Amelia 	 Millie 	
+ Daisy 	 Ella 	 Megan 	 Charlotte 	 Katie 	 Amelia 	 Ellie 	 Summer 	 Isabelle 	 Ella 	 Isabelle 	 Phoebe 	 Mia 	 Jasmine 	
+ Phoebe 	 Freya 	 Hannah 	 Katie 	 Holly 	 Evie 	 Erin 	 Daisy 	 Ava 	 Freya 	 Isabella 	 Molly 	 Isabelle 	 Isabel 	
+ Eva 	 Poppy 	 Erin 	 Freya 	 Phoebe 	 Isabella 	 Elizabeth 	 Isla 	 Poppy 	 Amy 	 Holly 	 Jasmine 	 Hannah 	 Lauren 	
+ Keira 	 Molly 	 Amy 	 Eva 	 Abigail 	 Millie 	 Alice 	 Sophia 	 Matilda 	 Isla 	 Abigail 	 Elizabeth 	 Summer 	 Madison 	
+ Paige 	 Jasmine 	 Isla 	 Isabel 	 Lilly 	 Imogen 	 Amelie 	 Lauren 	 Alice 	 Sophia 	 Leah 	 Brooke 	 Elizabeth 	 Amelie 	
+ Libby 	 Matilda 	 Brooke 	 Lauren 	 Madison 	 Sophia 	 Lacey 	 Gracie 	 Georgia 	 Eva 	 Madison 	 Paige 	 Matilda 	 Maisie 	
+ Maisie 	 Eleanor 	 Anna 	 Georgia 	 Anna 	 Maisie 	 Rebecca 	 Sienna 	 Lacey 	 Caitlin 	 Amelie 	 Sienna 	 Anna 	 Rebecca 	
+						
+ Charlotte 	 Caitlin 	 Amelia 	 Ellie 	 Ava 	 Amy 	 Brooke 	 Isabella 	 Amelia 	 Abigail 	 Amy 	 Mia 	 Abigail 	 Brooke 	
+ Erin 	 Isabel 	 Mia 	 Ava 	 Erin 	 Paige 	 Amber 	 Molly 	 Charlotte 	 Molly 	 Amber 	 Gracie 	 Gracie 	 Sienna 	
+ Amber 	 Rebecca 	 Daisy 	 Lacey 	 Gracie 	 Sienna 	 Eleanor 	 Lilly 	 Isabella 	 Eleanor 	 Eleanor 	 Rebecca 	 Paige 	 Libby 	
+
+
+TOTALS
+
+Name	Main shifts	Standby shifts	Max shifts willing to do
+ Olivia  Fake	0	0	0
+ Ruby  Fake	0	0	0
+ Emily  Fake	0	0	0
+ Grace  Fake	3	0	3
+ Jessica  Fake	3	0	4
+ Chloe  Fake	3	0	Inf
+ Sophie  Fake	3	0	Inf
+ Lily  Fake	3	0	3
+ Amelia  Fake	2	2	4
+ Evie  Fake	3	0	5
+ Mia  Fake	2	2	Inf
+ Ella  Fake	3	0	Inf
+ Charlotte  Fake	2	2	6
+ Lucy  Fake	0	0	0
+ Megan  Fake	1	0	1
+ Ellie  Fake	1	1	2
+ Isabelle  Fake	3	0	Inf
+ Isabella  Fake	2	2	4
+ Hannah  Fake	3	0	Inf
+ Katie  Fake	3	0	Inf
+ Ava  Fake	2	2	Inf
+ Holly  Fake	3	0	Inf
+ Summer  Fake	3	0	5
+ Millie  Fake	3	0	6
+ Daisy  Fake	2	1	Inf
+ Phoebe  Fake	3	0	6
+ Freya  Fake	3	0	3
+ Abigail  Fake	2	2	Inf
+ Poppy  Fake	2	0	2
+ Erin  Fake	2	2	Inf
+ Emma  Fake	0	0	Inf
+ Molly  Fake	2	2	Inf
+ Imogen  Fake	1	0	2
+ Amy  Fake	2	2	Inf
+ Jasmine  Fake	3	0	Inf
+ Isla  Fake	3	0	4
+ Scarlett  Fake	0	0	0
+ Leah  Fake	1	0	1
+ Sophia  Fake	3	0	4
+ Elizabeth  Fake	3	0	7
+ Eva  Fake	3	0	6
+ Brooke  Fake	2	2	Inf
+ Matilda  Fake	3	0	7
+ Caitlin  Fake	1	1	2
+ Keira  Fake	1	0	1
+ Alice  Fake	2	0	2
+ Lola  Fake	0	0	6
+ Lilly  Fake	1	1	2
+ Amber  Fake	0	3	5
+ Isabel  Fake	2	1	3
+ Lauren  Fake	3	0	5
+ Georgia  Fake	2	0	2
+ Gracie  Fake	1	3	Inf
+ Eleanor  Fake	1	3	6
+ Bethany  Fake	0	0	0
+ Madison  Fake	3	0	3
+ Amelie  Fake	3	0	3
+ Isobel  Fake	0	0	0
+ Paige  Fake	2	2	6
+ Lacey  Fake	2	1	4
+ Sienna  Fake	2	2	Inf
+ Libby  Fake	1	1	2
+ Maisie  Fake	3	0	Inf
+ Anna  Fake	3	0	Inf
+ Rebecca  Fake	2	2	Inf
