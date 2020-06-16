@@ -1,7 +1,7 @@
 import logging
 from ortools.sat.python import cp_model
 import pandas
-data = pandas.read_csv("constraints.csv")
+data = pandas.read_csv("rota.csv")
 
 days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
 times = ["am", "pm"]
@@ -13,8 +13,8 @@ main_shift_weighting = 3
 # how much worse main shifts are than standby shifts. Must be an integer.
 standby_shift_weighting = 2
 
-max_time = 70  # max time to look for solutions in seconds
-debug_info = False  # Set to True and the rota will record Yes/Maybe requests
+max_time = 600  # max time to look for solutions in seconds
+debug_info = True  # Set to True and the rota will record Yes/Maybe requests
 
 days_index = range(len(days))
 people_index = list(data['First'].index)
@@ -23,6 +23,29 @@ model = cp_model.CpModel()
 main_shifts = {}
 standby_shifts = {}
 
+total_num_shift_costs = len(days_index)*len(times_index) * (num_main_workers*main_shift_weighting + num_standby_workers*standby_shift_weighting)
+total_people = len(people_index)
+average_num_shift_costs=  int(total_num_shift_costs/total_people)
+
+
+total_num_main_shift_costs = len(days_index)*len(times_index) * (num_main_workers*main_shift_weighting )
+
+average_num_main_shift_costs=  int(total_num_main_shift_costs/total_people)
+
+def get_variance_component(to_sum, average):
+    a = model.NewIntVar(-250, 250, '')
+    model.Add(a ==sum(to_sum)  - average)
+
+
+  
+
+    e = model.NewIntVar(0, 250, '')
+    model.AddAbsEquality(e,a)
+
+
+    square_x = model.NewIntVar(0, 250, "")
+    model.AddProdEquality(square_x, [e, e])
+    return square_x
 # Here we create True/False for every person,day,shift possibility for main and standby shifts:
 for p in people_index:
     for d in days_index:
@@ -48,6 +71,7 @@ for p in people_index:
 
 # Here we state that people cannot work more days than they have offered to:
 people_num_shifts_list = []
+people_num_main_shifts_list = []
 for p in people_index:
   try:
     max_shifts = int(data['days'][p])
@@ -55,23 +79,28 @@ for p in people_index:
     # if they have not entered a numeric value assume they are prepared to work five days
     max_shifts = 5
   to_sum = []
+  to_sum_main = []
   to_sum_raw = []
   for d in days_index:
     for t in times_index:
       to_sum.append(main_shift_weighting *
                     main_shifts[(p, d, t)] + standby_shift_weighting*standby_shifts[(p, d, t)])
+      to_sum_main.append(main_shift_weighting *main_shifts[(p, d, t)])
       to_sum_raw.append(main_shifts[(p, d, t)] + standby_shifts[(p, d, t)])
   # People cannot work more than offered
   model.Add(sum(to_sum_raw) <= max_shifts)
 
   # We define a variable to hold the number of shifts this person is doing so we can then find the maximum of all of these
-  this_num_shifts = model.NewIntVar(0, 50, '')
-  model.Add(this_num_shifts == sum(to_sum))
-  people_num_shifts_list.append(this_num_shifts)
+
+
+  square_x = get_variance_component(to_sum, average_num_shift_costs)
+  people_num_shifts_list.append(square_x)
+
+  square_x = get_variance_component(to_sum_main, average_num_main_shift_costs)
+  people_num_main_shifts_list.append(square_x)
 
 # We force this new variable to be the maximum shifts one person does (with weightings)
-max_shifts_for_a_person = model.NewIntVar(0, 50, 'max_shifts_for_a_person')
-model.AddMaxEquality(max_shifts_for_a_person, people_num_shifts_list)
+
 
 # Here we work out how much people have to work on days they are only "Maybe" willing to work on
 # we can then minimise this
@@ -95,21 +124,21 @@ for p in people_index:
         loss_list.append(main_shifts[(p, d, t)] * main_shift_weighting)
         loss_list.append(standby_shifts[(p, d, t)] * standby_shift_weighting)
 
-model.Minimize(sum(loss_list) + max_shifts_for_a_person)
+model.Minimize(5*sum(loss_list) + sum(people_num_shifts_list) )
 
 
 solver = cp_model.CpSolver()
 solver.parameters.max_time_in_seconds = max_time
 result = solver.Solve(model)
 
-
+print(result)
 # Statistics.
 #print()
 #print('Statistics')
 #print('  - conflicts       : %i' % solver.NumConflicts())
 #print('  - branches        : %i' % solver.NumBranches())
 #print('  - wall time       : %f s' % solver.WallTime())
-#print('  - objective: %f' % solver.ObjectiveValue() )
+print('  - objective: %f' % solver.ObjectiveValue() )
 
 
 # The solver has now solved the problem
@@ -174,4 +203,4 @@ for p in people_index:
   except:
     max_days = "Inf"
   print(data['First'][p] + " " + data['Last'][p] + "\t" +
-        str(main_counts[p])+"\t" + str(standby_counts[p]) + "\t" + max_days)
+        str(main_counts[p])+"\t" + str(standby_counts[p])+"\t" + str(standby_counts[p]*standby_shift_weighting + main_counts[p]*main_shift_weighting) + "\t" + max_days)
