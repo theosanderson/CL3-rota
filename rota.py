@@ -12,8 +12,10 @@ num_standby_workers = 3
 main_shift_weighting = 3
 # how much worse main shifts are than standby shifts. Must be an integer.
 standby_shift_weighting = 2
+best_weighting = -1
 
-max_time = 600  # max time to look for solutions in seconds
+
+max_time = 900  # max time to look for solutions in seconds
 debug_info = True  # Set to True and the rota will record Yes/Maybe requests
 
 days_index = range(len(days))
@@ -115,16 +117,21 @@ for p in people_index:
       except AttributeError:
         entry = "no"
         logging.warning(f"'{entry}'' parsed as no.\n\n")
-      if entry == "no":
-        # If no we add a hard constraint
-        model.Add(main_shifts[(p, d, t)] == 0)
-        model.Add(standby_shifts[(p, d, t)] == 0)
-      if entry == "maybe":
+      if entry == "yes":
+        pass
+      elif entry == "best":
+        loss_list.append(main_shifts[(p, d, t)] * main_shift_weighting*best_weighting)
+
+      elif entry == "maybe":
         # If maybe we count how many times we had to use maybes to try to minimise
         loss_list.append(main_shifts[(p, d, t)] * main_shift_weighting)
         loss_list.append(standby_shifts[(p, d, t)] * standby_shift_weighting)
+      else:
+        # If no we add a hard constraint
+        model.Add(main_shifts[(p, d, t)] == 0)
+        model.Add(standby_shifts[(p, d, t)] == 0)
 
-model.Minimize(5*sum(loss_list) + sum(people_num_shifts_list) )
+model.Minimize(10*sum(loss_list) + sum(people_num_shifts_list) )
 
 
 solver = cp_model.CpSolver()
@@ -146,6 +153,8 @@ print('  - objective: %f' % solver.ObjectiveValue() )
 
 main_counts = [0 for x in people_index]
 standby_counts = [0 for x in people_index]
+maybe_counts = [0 for x in people_index]
+shift_strings = [ [] for x in people_index]
 
 main_output = {}
 standby_output = {}
@@ -157,21 +166,30 @@ for d in days_index:
       for p in people_index:
 
           if solver.Value(main_shifts[(p, d, t)]) == 1:
+                shift_strings[p].append(  days[d]+" "+times[t] + " (main)")
                 main_counts[p] = main_counts[p]+1
                 if debug_info:
                   main_output[(d, t)].append(data['First'][p] +
                                              "_" + data[days[d]+"_"+times[t]][p])
                 else:
                   main_output[(d, t)].append(data['First'][p])
+                if data[days[d]+"_"+times[t]][p] == "maybe":
+                  maybe_counts[p] = maybe_counts[p]+1
+
+
 
 
           elif solver.Value(standby_shifts[(p, d, t)]) == 1:
+                shift_strings[p].append(days[d]+" "+times[t] + " (standby)")
                 standby_counts[p] = standby_counts[p]+1
                 if debug_info:
                   standby_output[(d, t)].append(
                       data['First'][p] + "_" + data[days[d]+"_"+times[t]][p])
                 else:
                   standby_output[(d, t)].append(data['First'][p])
+
+                if data[days[d]+"_"+times[t]][p] == "maybe":
+                  maybe_counts[p] = maybe_counts[p]+1
 
 line = ""
 for d in days_index:
@@ -196,11 +214,16 @@ print()
 print()
 print("TOTALS")
 print()
-print("Name\tMain shifts\tStandby shifts\tMax shifts willing to do")
+print("Name\tMain shifts\tStandby shifts\tMaybe shifts \t Scoring \t Max shifts willing to do")
 for p in people_index:
   try:
     max_days = str(int(data['days'][p]))
   except:
     max_days = "Inf"
   print(data['First'][p] + " " + data['Last'][p] + "\t" +
-        str(main_counts[p])+"\t" + str(standby_counts[p])+"\t" + str(standby_counts[p]*standby_shift_weighting + main_counts[p]*main_shift_weighting) + "\t" + max_days)
+        str(main_counts[p])+"\t" + str(standby_counts[p])+"\t" + str(maybe_counts[p])+"\t" + str(standby_counts[p]*standby_shift_weighting + main_counts[p]*main_shift_weighting) + "\t" + max_days)
+
+
+for p in people_index:
+  if main_counts[p]>0 or standby_counts[p]>0:
+    print(data['email'][p] +"\t"+data['First'][p] +"\t"+ ",".join(shift_strings[p] ))        
