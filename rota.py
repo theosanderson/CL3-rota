@@ -15,7 +15,7 @@ standby_shift_weighting = 2
 best_weighting = -1
 
 
-max_time = 900  # max time to look for solutions in seconds
+max_time = 60  # max time to look for solutions in seconds
 debug_info = True  # Set to True and the rota will record Yes/Maybe requests
 
 days_index = range(len(days))
