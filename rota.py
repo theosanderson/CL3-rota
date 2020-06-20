@@ -1,7 +1,7 @@
 import logging
 from ortools.sat.python import cp_model
 import pandas
-data = pandas.read_csv("rota.csv")
+data = pandas.read_csv("constraints.csv")
 
 days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
 times = ["am", "pm"]
