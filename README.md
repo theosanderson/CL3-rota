@@ -20,6 +20,6 @@ The script imposes a number of hard constraints:
  - no-one can be assigned more shifts than they are listed as willing to do
  
  When there are multiple solutions that satisfy these constrains it seeks to minimise a number of "bad things":
- - people working when their availability is only listed as "Maybe"
- - people not working when their availability is listed as "Best"
+ - people working when their availability is only listed as "Maybe" (standby shifts are considered less bad than main shifts)
+ - people not working when their availability is listed as "Best" (main shifts are considered better than standby shifts)
  - the overall variance in terms of the score for the amount of work people do (score = 3 * number_of_main_shifts + 2 * number_of_standby_shifts)
